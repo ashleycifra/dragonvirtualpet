@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Popoy The Virtual Pet</string>
+    <string name="start_btn">Start</string>
+    <string name="start_screen">Popoy The Virtual Pet</string>
+    <string name="choose_egg">Hold To Choose Your Egg!</string>
+    <string name="choose_name">Enter Name</string>
+</resources>

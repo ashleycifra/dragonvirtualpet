@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pethome_bg"
+    tools:context=".HomeScreen">
+
+    <TextView
+        android:id="@+id/topnavbarbg"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/lightyellow"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/hungertext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/depixel_bold"
+        android:gravity="center"
+        android:text="Hunger"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintTop_toTopOf="@id/topnavbarbg"
+        app:layout_constraintRight_toLeftOf="@id/hygienetext"
+        />
+
+    <TextView
+        android:id="@+id/hygienetext"
+
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/depixel_bold"
+        android:gravity="center"
+        android:text="Hygiene"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:layout_marginRight="25dp"
+        app:layout_constraintTop_toTopOf="@id/hungertext"
+        app:layout_constraintBottom_toBottomOf="@id/hungertext"
+        app:layout_constraintRight_toLeftOf="@id/energytext"
+        />
+
+    <TextView
+        android:id="@+id/energytext"
+        android:layout_marginLeft="15dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/depixel_bold"
+        android:gravity="center"
+        android:text="Energy"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintTop_toTopOf="@id/hygienetext"
+        app:layout_constraintBottom_toBottomOf="@id/hygienetext"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/playtext"
+        android:layout_marginLeft="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/depixel_bold"
+        android:gravity="center"
+        android:text="Play"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintTop_toTopOf="@id/energytext"
+        app:layout_constraintBottom_toBottomOf="@id/energytext"
+        app:layout_constraintLeft_toRightOf="@id/energytext"
+        />
+
+    <TextView
+        android:id="@+id/traintext"
+        android:layout_marginLeft="45dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/depixel_bold"
+        android:gravity="center"
+        android:text="Train"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintTop_toTopOf="@id/playtext"
+        app:layout_constraintBottom_toBottomOf="@id/playtext"
+        app:layout_constraintLeft_toRightOf="@id/playtext"
+        />
+
+
+
+
+
+    <ProgressBar
+        android:id="@+id/hungerbar"
+        android:layout_width="65dp"
+        android:layout_height="30dp"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:scaleY="3"
+        android:progress="0"
+        android:max="100"
+        android:progressTint="@color/progressbar"
+        app:layout_constraintLeft_toLeftOf="@+id/hungertext"
+        app:layout_constraintRight_toRightOf="@+id/hungertext"
+        app:layout_constraintTop_toBottomOf="@id/hungertext"
+        android:indeterminate="false"
+        android:progressBackgroundTint="@color/progressbarbg"
+
+        />
+
+    <ProgressBar
+        android:id="@+id/hygienebar"
+        android:layout_width="65dp"
+        android:layout_height="30dp"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:scaleY="3"
+        android:progress="0"
+        android:max="100"
+        android:progressTint="@color/progressbar"
+        app:layout_constraintTop_toBottomOf="@id/hygienetext"
+        app:layout_constraintLeft_toLeftOf="@id/hygienetext"
+        app:layout_constraintRight_toRightOf="@id/hygienetext"
+        android:indeterminate="false"
+        android:progressBackgroundTint="@color/progressbarbg"
+        />
+
+    <ProgressBar
+        android:id="@+id/energybar"
+        android:layout_width="65dp"
+        android:layout_height="30dp"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:scaleY="3"
+        android:progress="0"
+        android:max="100"
+        android:progressTint="@color/progressbar"
+        app:layout_constraintTop_toBottomOf="@id/energytext"
+        app:layout_constraintLeft_toLeftOf="@id/energytext"
+        app:layout_constraintRight_toRightOf="@id/energytext"
+        android:indeterminate="false"
+        android:progressBackgroundTint="@color/progressbarbg"
+        />
+
+    <ProgressBar
+        android:id="@+id/playbar"
+        android:layout_width="65dp"
+        android:layout_height="30dp"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:scaleY="3"
+        android:progress="0"
+        android:max="100"
+        android:progressTint="@color/progressbar"
+        app:layout_constraintTop_toBottomOf="@id/playtext"
+        app:layout_constraintLeft_toLeftOf="@id/playtext"
+        app:layout_constraintRight_toRightOf="@id/playtext"
+        android:indeterminate="false"
+        android:progressBackgroundTint="@color/progressbarbg"
+        />
+
+    <ProgressBar
+        android:id="@+id/trainbar"
+        android:layout_width="65dp"
+        android:layout_height="30dp"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:scaleY="3"
+        android:progress="0"
+        android:max="100"
+        android:progressTint="@color/progressbar"
+        app:layout_constraintTop_toBottomOf="@id/traintext"
+        app:layout_constraintLeft_toLeftOf="@id/traintext"
+        app:layout_constraintRight_toRightOf="@id/traintext"
+        android:indeterminate="false"
+        android:progressBackgroundTint="@color/progressbarbg"
+        />
+
+    <TextView
+        android:id="@+id/petname"
+        android:text="Pet Name"
+        android:gravity="center"
+        android:fontFamily="@font/depixel_bold"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/topnavbarbg"
+        app:layout_constraintBottom_toTopOf="@+id/cardview"
+
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="375dp"
+        android:layout_height="520dp"
+        android:id="@+id/cardview"
+        app:cardBackgroundColor="@color/whitetransparent"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="3dp"
+        app:contentPadding="4dp"
+        android:elevation="8dp"
+        android:divider="@android:color/black"
+        android:dividerHeight="0.0px"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/petlayout"
+            android:padding="15dp"
+
+            >
+            <ImageView
+                android:id="@+id/activityheader"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+
+
+            <ImageView
+                android:id="@+id/inventoryicon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:tag="unclicked"
+                android:visibility="invisible"
+                android:src="@drawable/inventory_unclicked"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/inventoryitem1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+
+                app:layout_constraintTop_toBottomOf="@id/inventoryicon"
+                app:layout_constraintRight_toRightOf="@id/inventoryicon"/>
+            <ImageView
+                android:id="@+id/inventoryitem2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+
+                app:layout_constraintTop_toBottomOf="@id/inventoryitem1"
+                app:layout_constraintRight_toRightOf="@id/inventoryicon"/>
+            <ImageView
+                android:id="@+id/inventoryitem3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+
+                app:layout_constraintTop_toBottomOf="@id/inventoryitem2"
+                app:layout_constraintRight_toRightOf="@id/inventoryicon"/>
+            <ImageView
+                android:id="@+id/inventoryitem4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+
+                app:layout_constraintTop_toBottomOf="@id/inventoryitem3"
+                app:layout_constraintRight_toRightOf="@id/inventoryicon"/>
+
+            <ImageView
+                android:id="@+id/peticon"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ybd1"
+                android:layout_marginTop="120dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/petreacts"
+                android:scaleX="-1"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="120dp"
+                app:layout_constraintLeft_toRightOf="@id/peticon"
+                app:layout_constraintBottom_toTopOf="@id/peticon"/>
+
+            <ImageView
+                android:id="@+id/foodicon"
+                android:tag="unclicked"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/food_unclicked"
+                app:layout_constraintBottom_toBottomOf="@+id/petlayout"
+                app:layout_constraintLeft_toLeftOf="@+id/petlayout"/>
+
+            <ImageView
+                android:id="@+id/showericon"
+                android:tag="unclicked"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/shower_unclicked"
+                app:layout_constraintLeft_toRightOf="@id/foodicon"
+                app:layout_constraintBottom_toBottomOf="@+id/petlayout"/>
+
+            <ImageView
+                android:id="@+id/sleepicon"
+                android:tag="unclicked"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/sleep_unclicked"
+                android:layout_marginLeft="20dp"
+                app:layout_constraintLeft_toRightOf="@id/showericon"
+                app:layout_constraintBottom_toBottomOf="@+id/petlayout"/>
+
+            <ImageView
+                android:id="@+id/playicon"
+                android:tag="unclicked"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/play_unclicked"
+                app:layout_constraintLeft_toRightOf="@id/sleepicon"
+                app:layout_constraintBottom_toBottomOf="@+id/petlayout"/>
+
+            <ImageView
+                android:id="@+id/trainicon"
+                android:tag="unclicked"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/train_unclicked"
+                android:layout_marginLeft="20dp"
+                app:layout_constraintLeft_toRightOf="@id/playicon"
+                app:layout_constraintBottom_toBottomOf="@+id/petlayout" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/bgnav"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/lightyellow"
+        android:fontFamily="@font/depixel_bold"
+        android:gravity="center"
+        android:src="@drawable/abd1"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="50dp"
+        />
+
+    <ImageView
+        android:id="@+id/homenav"
+        android:tag="clicked"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="Nav Bar"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+
+        android:src="@drawable/home_clicked"
+        app:layout_constraintLeft_toLeftOf="@id/bgnav"
+        app:layout_constraintTop_toTopOf="@+id/bgnav"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="40dp"
+        />
+
+    <ImageView
+        android:id="@+id/profilenav"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:tag="unclicked"
+        android:text="Nav Bar"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+
+        android:src="@drawable/profile_unclicked"
+        app:layout_constraintLeft_toRightOf="@id/homenav"
+        app:layout_constraintTop_toTopOf="@+id/bgnav"
+
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="30dp"
+        />
+
+    <ImageView
+        android:id="@+id/shopnav"
+        android:tag="unclicked"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+
+        android:text="Nav Bar"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:src="@drawable/store_unclicked"
+        app:layout_constraintRight_toLeftOf="@id/arenanav"
+        app:layout_constraintTop_toTopOf="@+id/bgnav"
+
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="30dp"
+        />
+
+    <ImageView
+        android:id="@+id/arenanav"
+        android:tag="unclicked"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+
+        android:text="Nav Bar"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+
+        android:src="@drawable/arena_unclicked"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bgnav"
+
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="40dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

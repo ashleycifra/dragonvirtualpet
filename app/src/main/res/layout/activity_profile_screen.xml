@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pethome_bg"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/petinfoheader"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/lightyellow"
+        android:fontFamily="@font/depixel_bold"
+        android:gravity="center"
+        android:text="Pet Info"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardview"
+        app:cardBackgroundColor="@color/whitetransparent"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="3dp"
+        app:contentPadding="4dp"
+        android:elevation="8dp"
+        android:divider="@android:color/black"
+        android:dividerHeight="0.0px"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+
+
+        app:layout_constraintTop_toBottomOf="@id/petinfoheader"
+        app:layout_constraintBottom_toTopOf="@+id/bgnav"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/profilelayout"
+            android:padding="16dp"
+            >
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:id="@+id/dragonicon"
+                android:src="@drawable/abd1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+            <TextView
+                android:id="@+id/nameheader"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="17sp"
+                android:fontFamily="@font/depixel_bold"
+
+                android:text="Name"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/dragonicon"/>
+
+            <TextView
+                android:id="@+id/ageheader"
+                android:textSize="17sp"
+                android:text="Age"
+                android:textColor="@color/black"
+                android:fontFamily="@font/depixel_bold"
+
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintLeft_toLeftOf="@id/nameheader"
+                app:layout_constraintTop_toBottomOf="@id/nameheader"
+                />
+
+            <TextView
+                android:id="@+id/genderheader"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+
+                android:textColor="@color/black"
+                android:fontFamily="@font/depixel_bold"
+                android:text="Gender"
+                android:textSize="17sp"
+
+                app:layout_constraintLeft_toLeftOf="@id/ageheader"
+                app:layout_constraintTop_toBottomOf="@id/ageheader"
+                />
+
+            <TextView
+                android:id="@+id/nameinput"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:fontFamily="@font/depixel_normal"
+                android:text="Popoy"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="29dp"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/nameheader"/>
+
+
+            <TextView
+                android:id="@+id/ageinput"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+
+
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:text="2"
+                android:fontFamily="@font/depixel_normal"
+
+                app:layout_constraintTop_toBottomOf="@id/nameinput"
+                app:layout_constraintLeft_toLeftOf="@+id/nameinput"
+                />
+
+            <TextView
+                android:id="@+id/dayheader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+
+
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:text="days"
+                android:fontFamily="@font/depixel_normal"
+
+                app:layout_constraintTop_toBottomOf="@id/nameinput"
+                app:layout_constraintLeft_toRightOf="@+id/ageinput"
+                />
+
+            <TextView
+                android:id="@+id/genderinput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+
+                android:textColor="@color/black"
+                android:fontFamily="@font/depixel_normal"
+                android:text="Female"
+                android:textSize="20sp"
+
+                app:layout_constraintTop_toBottomOf="@id/ageinput"
+                app:layout_constraintLeft_toLeftOf="@+id/nameinput"
+
+                />
+
+
+            <TextView
+                android:id="@+id/experienceheader"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/depixel_bold"
+                android:text="Experience"
+                android:textSize="19sp"
+                android:layout_height="wrap_content"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/dragonicon"
+                app:layout_constraintTop_toBottomOf="@id/dragonicon"
+                />
+
+            <TextView
+                android:id="@+id/levelheader"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/depixel_bold"
+                android:text="Level "
+                android:textSize="19sp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@id/dragonicon"
+                app:layout_constraintTop_toBottomOf="@id/experienceheader"
+                />
+
+
+            <TextView
+                android:id="@+id/levelinput"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/depixel_bold"
+                android:text="1"
+                android:textSize="19sp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@+id/levelheader"
+                app:layout_constraintTop_toBottomOf="@id/experienceheader"
+                />
+
+            <ProgressBar
+                android:id="@+id/expbar"
+                android:layout_width="190dp"
+                android:layout_height="30dp"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:scaleY="4"
+                android:progress="0"
+                android:max="200"
+                android:progressTint="@color/progressbar"
+                android:layout_marginLeft="40dp"
+                app:layout_constraintLeft_toRightOf="@id/levelheader"
+                app:layout_constraintBottom_toBottomOf="@id/levelheader"
+                app:layout_constraintTop_toTopOf="@id/levelheader"
+                android:indeterminate="false"
+                android:progressBackgroundTint="@color/progressbarbg"
+                />
+
+            <TextView
+                android:id="@+id/horizontalline"
+                android:layout_height="2dp"
+                android:layout_marginTop="15dp"
+
+                android:layout_width="match_parent"
+                android:background="@color/black"
+                android:textSize="25sp"
+                app:layout_constraintTop_toBottomOf="@id/levelheader"
+                android:gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/stats"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/depixel_bold"
+                android:text="Stats"
+                android:textSize="19sp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@id/dragonicon"
+                app:layout_constraintTop_toBottomOf="@id/horizontalline"
+                />
+            <TextView
+                android:id="@+id/pointsword"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/depixel_bold"
+                android:text="Points"
+                android:textSize="19sp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                app:layout_constraintRight_toRightOf="@id/horizontalline"
+                app:layout_constraintTop_toBottomOf="@id/horizontalline"
+                app:layout_constraintRight_toLeftOf="@id/pointsnumber"
+                />
+
+            <TextView
+                android:id="@+id/pointsnumber"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/depixel_bold"
+                android:text="30"
+                android:textSize="19sp"
+                android:layout_height="wrap_content"
+                app:layout_constraintRight_toRightOf="@id/horizontalline"
+                app:layout_constraintTop_toBottomOf="@id/horizontalline"
+                />
+
+            <TextView
+                android:id="@+id/StrengthText"
+                android:layout_marginLeft="10dp"
+
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/depixel_bold"
+                android:text="Strength"
+                android:textSize="19sp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@id/dragonicon"
+                app:layout_constraintTop_toBottomOf="@id/stats"
+                />
+
+            <TextView
+                android:id="@+id/SpeedText"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/depixel_bold"
+                android:text="Speed"
+                android:textSize="19sp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@id/dragonicon"
+                app:layout_constraintTop_toBottomOf="@id/StrengthText"
+                />
+
+            <TextView
+                android:id="@+id/HealthText"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/depixel_bold"
+                android:text="Health"
+                android:textSize="19sp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@id/dragonicon"
+                app:layout_constraintTop_toBottomOf="@id/SpeedText"
+                />
+
+            <TextView
+                android:id="@+id/strengthpts"
+                android:layout_marginLeft="50dp"
+
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/depixel_bold"
+                android:text="20"
+                android:textSize="19sp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/StrengthText"
+                app:layout_constraintTop_toBottomOf="@id/stats"
+                />
+
+            <TextView
+                android:id="@+id/speedpts"
+                android:layout_marginLeft="50dp"
+
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/depixel_bold"
+                android:text="20"
+                android:textSize="19sp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/StrengthText"
+                app:layout_constraintTop_toBottomOf="@id/strengthpts"
+                />
+
+            <TextView
+                android:id="@+id/healthpts"
+                android:layout_marginLeft="50dp"
+
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/depixel_bold"
+                android:text="20"
+                android:textSize="19sp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/StrengthText"
+                app:layout_constraintTop_toBottomOf="@id/speedpts"
+                />
+
+            <ImageView
+                android:id="@+id/strengthminus"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/minusicon"
+                android:visibility="invisible"
+                android:layout_marginLeft="20dp"
+                app:layout_constraintLeft_toRightOf="@id/strengthpts"
+                app:layout_constraintTop_toTopOf="@+id/strengthpts"
+                app:layout_constraintBottom_toBottomOf="@+id/strengthpts"/>
+
+            <ImageView
+                android:id="@+id/strengthplus"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/plusicon"
+                android:visibility="invisible"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintLeft_toRightOf="@id/strengthminus"
+                app:layout_constraintTop_toTopOf="@+id/strengthpts"
+                app:layout_constraintBottom_toBottomOf="@+id/strengthpts"/>
+
+            <ImageView
+                android:id="@+id/speedminus"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/minusicon"
+                android:visibility="invisible"
+                android:layout_marginLeft="20dp"
+                app:layout_constraintLeft_toRightOf="@id/speedpts"
+                app:layout_constraintTop_toTopOf="@+id/speedpts"
+                app:layout_constraintBottom_toBottomOf="@+id/speedpts"
+                />
+
+            <ImageView
+                android:id="@+id/speedplus"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/plusicon"
+                android:visibility="invisible"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintLeft_toRightOf="@id/strengthminus"
+                app:layout_constraintTop_toTopOf="@+id/speedpts"
+                app:layout_constraintBottom_toBottomOf="@+id/speedpts"/>
+
+            <ImageView
+                android:id="@+id/healthminus"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/minusicon"
+                android:visibility="invisible"
+                android:layout_marginLeft="20dp"
+                app:layout_constraintLeft_toRightOf="@id/healthpts"
+                app:layout_constraintTop_toTopOf="@+id/healthpts"
+                app:layout_constraintBottom_toBottomOf="@+id/healthpts"
+                />
+
+            <ImageView
+                android:id="@+id/healthplus"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/plusicon"
+                android:visibility="invisible"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintLeft_toRightOf="@id/speedminus"
+                app:layout_constraintTop_toTopOf="@+id/healthpts"
+                app:layout_constraintBottom_toBottomOf="@+id/healthpts"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/evolve_btn"
+                android:text="Evolve!"
+                android:fontFamily="@font/depixel_bold"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_width="180sp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_edges"
+                app:layout_constraintTop_toBottomOf="@+id/HealthText"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="20dp"
+                android:visibility="invisible"
+
+                />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/bgnav"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/lightyellow"
+        android:fontFamily="@font/depixel_bold"
+        android:gravity="center"
+        android:src="@drawable/abd1"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="50dp"
+        />
+
+    <ImageView
+        android:id="@+id/homenav"
+        android:tag="unclicked"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="Nav Bar"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+
+        android:src="@drawable/home_unclicked"
+        app:layout_constraintLeft_toLeftOf="@id/bgnav"
+        app:layout_constraintTop_toTopOf="@+id/bgnav"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="40dp"
+        />
+
+    <ImageView
+        android:id="@+id/profilenav"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:tag="clicked"
+        android:text="Nav Bar"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+
+        android:src="@drawable/profile_clicked"
+        app:layout_constraintLeft_toRightOf="@id/homenav"
+        app:layout_constraintTop_toTopOf="@+id/bgnav"
+
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="30dp"
+        />
+
+    <ImageView
+        android:id="@+id/shopnav"
+        android:tag="unclicked"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+
+        android:text="Nav Bar"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:src="@drawable/store_unclicked"
+        app:layout_constraintRight_toLeftOf="@id/arenanav"
+        app:layout_constraintTop_toTopOf="@+id/bgnav"
+
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="30dp"
+        />
+
+    <ImageView
+        android:id="@+id/arenanav"
+        android:tag="unclicked"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+
+        android:text="Nav Bar"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+
+        android:src="@drawable/arena_unclicked"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bgnav"
+
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="40dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

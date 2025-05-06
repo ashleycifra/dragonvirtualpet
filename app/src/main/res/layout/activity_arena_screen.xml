@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_arena">
+
+
+    <TextView
+        android:id="@+id/arenaheader"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="Arena coming soon!"
+        android:fontFamily="@font/depixel_bold"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@color/lightyellow"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="355dp"
+        android:layout_height="520dp"
+        android:id="@+id/cardview"
+        app:cardBackgroundColor="@color/whitetransparent"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="3dp"
+        app:contentPadding="4dp"
+        android:elevation="8dp"
+        android:divider="@android:color/black"
+        android:dividerHeight="0.0px"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        app:layout_constraintTop_toBottomOf="@id/arenaheader"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/petlayout"
+            android:padding="15dp"
+            >
+            <ImageView
+                android:id="@+id/dragonarena"
+                android:layout_width="450dp"
+                android:layout_height="400dp"
+                android:src="@drawable/dragonarena"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/back_btn"
+        android:text="Back"
+        android:fontFamily="@font/depixel_bold"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_width="180sp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_edges"
+        app:layout_constraintTop_toBottomOf="@id/cardview"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
